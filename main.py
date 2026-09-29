@@ -14,7 +14,7 @@ class ResearchResponse(BaseModel):
     sources : list[str]
     tools_used : list[str]
 
-llm = ChatGoogleGenerativeAI(model = "gemini-3.6-flash")
+llm = ChatGoogleGenerativeAI(model = "gemini-3.5-flash")
 parser = PydanticOutputParser(pydantic_object = ResearchResponse)
 
 prompt = ChatPromptTemplate.from_messages(
